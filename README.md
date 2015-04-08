@@ -8,4 +8,4 @@ webpack // builds src/index.js with sass-loader -- node-sass v3
 ```
 
 *Interesting to Note*
-Forked lego and added an index.js that exports an `includePaths` variable, basically passing the path to the lego `scss`.  Therefore, in grunt, gulp, and webpack sass configs you can `require('lego').includePath` and in your main scss file `import 'core/something-cool'` or whatever module you want in the scss directory without symlinking.
+Forked lego and added an index.js that exports an `includePaths` variable, basically passing the path to the lego `scss` directory.  Therefore, in grunt, gulp, and webpack sass configs you can `require('lego').includePath` and in your main scss file `import 'core/something-cool'` or whatever module you want in the scss directory without symlinking.
