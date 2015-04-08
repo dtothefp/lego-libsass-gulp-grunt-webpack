@@ -16,7 +16,7 @@
     "grunt-sass": "^0.18.1",
     "gulp": "^3.8.11",
     "gulp-sass": "^1.3.3",
-    "lego": "git+ssh://git@github.com:dtothefp/lego.git#dfoxpowell/add-includepath",
+    "lego": "git+ssh://git@github.com:dtothefp/lego.git",
     "load-grunt-config": "^0.16.0",
     "node-bourbon": "^1.2.3",
     "node-sass": "^2.1.1",
