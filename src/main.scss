@@ -4,12 +4,13 @@
 // Import `core` and `desktop` variables
 
 @import 'core/core-variables';
-
+@import 'desktop/desktop-variables';
 
 // ## Core and Desktop partials
 // Import `core` and `desktop` partials
 
 @import 'core/core-partials';
+@import 'desktop/desktop-partials';
 
 // ## Libraries
 // 3rd party code.
