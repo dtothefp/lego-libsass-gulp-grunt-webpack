@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var loadersByExtension = require('./config/loaders-by-extension');
 var config = require('./config').dev.options.variables;
 var src = config.src;
 var dest = config.dist;
@@ -9,14 +8,27 @@ var dest = config.dist;
 var entry = {
   bundle: path.join(__dirname, src, 'index.js')
 };
+var cssLoaders = ['style', 'css']
 
-var stylesheetLoaders = {
-  'scss': [
-    'style-loader',
-    'css-loader',
-    'sass-loader?imagePath=~stylesheets/blocks&includePaths[]=' + require('lego').includePath
-  ]
-};
+var styleLoaders = [
+  {
+    test: /\.scss$/,
+    loaders: cssLoaders.concat([
+      'sass?includePaths[]=' + require('lego').includePath
+    ])
+  },
+  {
+    test: /\.css$/,
+    loaders: cssLoaders
+  }
+];
+
+styleLoaders = styleLoaders.map(function(loaderO) {
+  return {
+    test: loaderO.test,
+    loader: ExtractTextPlugin.extract(loaderO.loaders.slice(1).join('!'))
+  }
+});
 
 module.exports =  {
   entry: entry,
@@ -29,7 +41,12 @@ module.exports =  {
     root: path.join(__dirname, src)
   },
   module: {
-    loaders: loadersByExtension(stylesheetLoaders)
+    loaders: styleLoaders
   },
+  plugins: [
+    new ExtractTextPlugin('main.css', {
+        allChunks: true
+    })
+  ],
   devtool: 'eval',
 };

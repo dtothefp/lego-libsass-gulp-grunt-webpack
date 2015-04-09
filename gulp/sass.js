@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var config = require('../config').dev.options.variables;
 var src = path.join(config.src, 'main.scss');
-var dest = path.join(config.dist, 'main.css');
+var dest = config.dist;
 
 gulp.task('sass', function () {
   return gulp.src(src)
