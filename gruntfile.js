@@ -9,5 +9,6 @@ module.exports = function(grunt) {
 
 	// The development server (the recommended option for development)
 	grunt.registerTask('default', ['config:dev', 'sass']);
+	grunt.registerTask('sass-compass', ['config:dev', 'compass']);
 
 };
