@@ -9,11 +9,12 @@
   },
   "dependencies": {
     "autoprefixer-loader": "^1.1.0",
-    "css-loader": "^0.9.0",
+    "css-loader": "^0.9.1",
     "extract-text-webpack-plugin": "^0.3.5",
     "grunt": "^0.4.5",
     "grunt-config": "^0.2.2",
-    "grunt-sass": "git+ssh://git@github.com:sindresorhus/grunt-sass.git",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-sass": "^0.9.2",
     "gulp": "^3.8.11",
     "gulp-sass": "git://github.com/dlmanning/gulp-sass#2.x",
     "gulp-scss-lint": "^0.1.11",
@@ -24,13 +25,11 @@
     "require-dir": "^0.3.0",
     "sass": "^0.5.0",
     "sass-loader": "git+ssh://git@github.com:jtangelder/sass-loader.git",
+    "style-loader": "^0.9.0",
     "webpack": "^1.5.1",
     "webpack-dev-server": "1.6.4"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "css-loader": "^0.9.1",
-    "style-loader": "^0.9.0"
-  }
+  "devDependencies": {}
 }

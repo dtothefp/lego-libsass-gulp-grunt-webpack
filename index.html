@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+  <link rel="stylesheet" href="dist/main.css">
+  <style>
+    .container > * {
+      box-sizing: border-box;
+    }
+    .smart-grid {
+      border: 1px solid goldenrod;
+    }
+    .row div,
+    .lego-grid__cell {
+      height: 50px;
+      border: 1px solid firebrick;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="columns one-third smart-grid"></div>
+      <div class="columns one-third smart-grid"></div>
+      <div class="columns one-third smart-grid"></div>
+    </div>
+    <div class="lego-grid lego-grid--gutter--narrow">
+      <div class="lego-grid__cell width-3-5">
+        <div class="doc-placeholder">3/5</div>
+      </div>
+      <div class="lego-grid__cell width-1-5">
+        <div class="doc-placeholder">1/5</div>
+      </div>
+      <div class="lego-grid__cell width-1-5">
+        <div class="doc-placeholder">1/5</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

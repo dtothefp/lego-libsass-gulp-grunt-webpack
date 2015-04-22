@@ -1,0 +1,22 @@
+{
+  "name": "lego-libsass",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dtothefp/lego-libsass-gulp-grunt-webpack",
+  "authors": [
+    "David Fox-Powell <dtothefp@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-smart-grid": "~5.1.5"
+  },
+  "devDependencies": {
+    "css-smart-grid": "~5.1.5"
+  }
+}
